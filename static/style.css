@@ -1,0 +1,305 @@
+* { padding: 0; margin: 0; }
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+    font-family: sans-serif;
+    box-sizing: border-box !important;
+    overflow: hidden;
+}
+
+/* #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+} */
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.row{
+  height: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 0;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_form{
+  padding: 0.5em;
+
+  
+}
+
+.login_left{
+  background-color: #8EC0FA;
+}
+
+.login_left_image{
+  padding: 10%;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.header{
+  font-family: sans-serif;
+  font-size: 2.5em;
+  color: #000000;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+  /* font-weight: bold; */
+}
+
+.input_field{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  width: 100%;
+  font-size: 1.2em;
+  padding: 0.7em;
+  margin-bottom: 0.5em;
+  background-color: #F3F3F3;
+  border:none;
+}
+
+.label{
+  box-sizing: border-box;
+  display: block;
+  font-family: sans-serif;
+  width: 100%;
+  font-size: 1.2em;
+  padding: 0.7em;
+  margin-bottom: 0.5em;
+  background-color: #F3F3F3;
+  cursor: pointer;
+}
+
+.upload_field{
+  font-family: sans-serif;
+  padding: 0.7em;
+  margin-bottom: 0.5em;
+  background-color: #F3F3F3;
+}
+
+.submit_button{
+  color: #fff;
+  font-family: 'Sen', sans-serif;
+  width: 100%;
+  font-size: 1.2em;
+  padding: 0.9em;
+  margin-top: 1.5em;
+  background-color: #0076FF;
+  border:none;
+  cursor: pointer;
+}
+
+.submit_button:hover{
+  background-color: #2985ee;
+}
+
+/* .register_left{
+  
+} */
+
+.register_right{
+  background-color: #8EC0FA;
+}
+
+.register_form{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20%;
+}
+
+.register_left_image{
+  padding: 10%;
+  width: 40%;
+  object-fit: contain;
+
+}
+
+.text{
+  padding: 8% 12%;
+  text-align: center;
+}
+
+.text_header{
+  font-style: italic;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#gender_select{
+  width: 100%;
+}
+
+.dash_row{
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard_left{
+  width: 33%;
+  height: 100%;
+  background-color: #8EC0FA;
+}
+
+.dashboard_right{
+  width:67%;
+  height: 100%
+}
+
+
+
+.dash_top_left_img{
+  width: 5vw;
+  position: absolute;
+  top:2.5vw;
+  left: 2.5vw;
+
+}
+.student_info{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dash_image_div{
+  height: 40%;
+  width: 100%;
+}
+
+.dash_image{
+  box-sizing: border-box;
+/*   padding: 15%;
+ */  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.student_image{
+  width: 30%;
+  margin-bottom: 1.5em;
+}
+.student_name{
+  font-size: 1.5em;
+  color: #000000;
+}
+
+.dash_head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+}
+
+.dash_body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.dash_header{
+  font-size: 2em;
+  color: #9EA1A4;
+  font-weight: bold;
+}
+
+.log_out{
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+  background-color: #0076FF;
+  border:none;
+  padding: 0.8em;
+}
+
+.take_test_button{
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  background-color: #0076FF;
+  border:none;
+  padding: 0.8em;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.test_left{
+  width: 40%;
+  height: 100%;
+  background-color: #EDEDED;
+}
+
+.test_right{
+  width:60%;
+  height: 100%
+}
+
+.camera_div{
+  height: 65%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.test_bottom_div{
+  height: 35%;
+  width: 100%;
+  background-color: #8EC0FA;
+}
+
+.register_link{
+  font-size: 1em;
+  margin-top:1.5em;
+  width: 100%;
+  text-align: center;
+}
+
+.black{
+  color: #000000;
+  text-decoration: underline;
+}
+
+.questions{
+  height: 80%;
+  font-size: 1.2em;
+  width: 90%;
+  padding: 5%;
+  overflow: scroll;
+}
+
+.test_submit_button{
+  font-size: 1.2em;
+  color: #fff;
+  cursor: pointer;
+  background-color: #0076FF;
+  border:none;
+  padding: 0.5em 0.8em;
+  margin: 1em;
+  height: 10%;
+}
+
+.video{
+  width: 100%;
+}
+
+.video_image{
+  width: 90%;
+}

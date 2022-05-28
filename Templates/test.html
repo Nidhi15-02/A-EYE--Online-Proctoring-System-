@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="static/register_illustration.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Test</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dash_row test_left">
+        
+        <div class="camera_div">
+            <div class="video">
+                <img src="{{ url_for('test') }}" class="video_image"/>
+            </div>
+        </div>
+        <div class="test_bottom_div">
+        </div>
+      </div>
+      <div class="dash_row test_right">
+        <div class="dash_head">
+          <div class="dash_header"> Demo questions</div>
+        </div>
+        <div class="dash_body">
+            <div class="questions">
+              <div>1) Which of the following is not the type of queue?</div><br>
+              <label><input type="radio" value="option1" name="option1"><span>Priority queue</span></label><br>
+              <label><input type="radio" value="option2" name="option2"><span>Single-ended queue</span></label><br>
+              <label><input type="radio" value="option3" name="option3"><span>Circular queue</span></label><br>
+              <label><input type="radio" value="option4" name="option4"><span>Ordinary queue</span></label><br>
+            <br><br>
+              <div>2) Which of the following is a linear data structure?</div><br>
+              <label><input type="radio" value="option1" name="option1"><span>Array</span></label><br>
+              <label><input type="radio" value="option2" name="option2"><span>AVL Trees</span></label><br>
+              <label><input type="radio" value="option3" name="option3"><span>Binary Trees</span></label><br>
+              <label><input type="radio" value="option4" name="option4"><span>Graphs</span></label><br>
+            <br><br>
+            </div>
+            <button class="test_submit_button"><a href="/student_profile">Submit</a></button>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>

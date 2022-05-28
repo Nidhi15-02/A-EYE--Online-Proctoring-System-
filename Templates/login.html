@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="static/register_illustration.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <form action="/login", method="post" class="login_form">
+          <div class="header">Sign In</div>
+          <input class="input_field" type="text" id="Username" name="Username" placeholder="Username" required><br>
+          <input class="input_field" type="password" id="password" name="psw" placeholder="Password" required><br>
+          <input class="submit_button" type="submit" value="Login"><br><br>
+          <h5>{{msg}}</h5>
+        </form>
+        <div class="register_link">New to A-EYE? <a href="/" class="black">Register</a></div>
+      </div>
+      <div class="row login_left">
+        <img class="login_left_image" src="static/login_illustration.svg"/>
+      </div>
+    </div>
+    
+    <!-- <script type="module" src="/main.js"></script> -->
+  </body>
+</html>

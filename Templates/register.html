@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="Templates/static/register_illustration.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row register_left">
+        <img class="register_left_image" src="static/register_illustration.png"/>
+        <div class="text_header">A-EYE</div>
+        <div class="text">A-EYE is an Al-based proctoring system. It is capable of recognizing candidates by their name, detecting their mobile phones and head position, and raises alert message if any malpractice is observed.</div>
+      </div>
+      <div class="row register_right">
+        <form action="/", method="post" class="register_form", enctype="multipart/form-data" >
+          <div class="header">Register</div>
+          <input class="input_field" type="text" id="Username" name="Username" placeholder="Username" required><br>
+          <input class="input_field" type="password" id="password" name="psw" placeholder="Password" required><br>
+          <select class="input_field" id="gender_select" name="gender" placeholder="Gender">
+            <option disabled selected value>Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select><br>
+          <label class="label" for="image_file">Select Image</label><br>
+          <input type="file" id="image_file" name="filename" style="display:none;" accept=".jpg, .png, .jpeg" required>
+          <input class="submit_button" type="submit" value="Register"><br>
+          <h5>{{msg}}</h5>
+          <div class="register_link">Already have an Account? <a href="/login" class="black">Sign In</a></div>
+        </form>
+      </div>
+      
+    </div>
+    
+    <!-- <script type="module" src="/main.js"></script> -->
+  </body>
+</html>

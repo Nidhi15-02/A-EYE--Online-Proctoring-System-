@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="static/register_illustration.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dash_row dashboard_left">
+        <img class="dash_top_left_img" src="static/register_illustration.png"/>
+        <div class="student_info">
+          <img class="student_image" src="static/student_image.png"/>
+          <div class="student_name">{{name}}</div>
+        </div>
+        <div class="dash_image_div">
+          <img class="dash_image" src="static/dashboard_illustration.png"/>
+        </div>
+      </div>
+      <div class="dash_row dashboard_right">
+        <div class="dash_head">
+          <div class="dash_header">Practice Tests</div>
+          <button class="log_out"><a href="/login">Log Out</a></button>
+        </div>
+        <div class="dash_body">
+            <form action="/student_profile", method="post">
+                <input class="take_test_button" type="submit" value="Take a demo test"><br><br>
+                
+                
+            </form>
+          <!-- <button class="take_test_button"><a href="/">Take a Demo Test</a></button> -->
+        </div>
+      </div>
+      
+    </div>
+    
+  </body>
+  
+</html>
