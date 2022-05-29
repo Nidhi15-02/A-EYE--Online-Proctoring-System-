@@ -41,11 +41,11 @@ flask run
 # Methodology
 The main model consist of three functions:
 
-- head_pose_detect(): This function uses six face landmarks i.e nose tip, chin, left and right end points of eyes and lips to detect the position of the head.
+- head_pose_detect(): This function uses six face landmarks i.e nose tip, chin, left and right end points of eyes and lips to detect the position of the head. This functions detects whether the person is looking left aur right and accordingly raise alert message.
 
-- detect_face_wc(): This function detect face on the webcam, encodes the face image using face-recognition library and then compares this encoding with the already existing encodings of registered candidates and returns the name of the person whose encoding matches with the given encoding along with his/her face co-ordinates.
+- detect_face_wc(): This function detect face on the webcam,and then compares the face with the image uploaded while registering, checks whether both the images match and even returns the co-ordinates of the face of the person. It raises an alert message if the faces do not match. It helps in recognising whether the person giving the exam is same as the person from whose account the exam is opened.
 
-- detect_phone_person(): This function makes use of YOLOv5 model to detect if the candidate is using phone. It can also detect if there are more than one person in the frame.
+- detect_phone_person():This function makes use of YOLOv5 model to detect if the candidate is using phone.
 
 # Website Screenshots
 ![Register Page](https://github.com/Nidhi15-02/A-EYE--Online-Proctoring-System-/blob/main/Register_page.png?raw=true)
