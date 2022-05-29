@@ -15,16 +15,18 @@ app.secret_key= 'your secret key'
 
 images={}
 encoding={}
-
+# directory to store images of the users
 if (os.path.exists("face_images")==0):
     os.mkdir("face_images")
 
+# text file to store names of the users
 if os.path.exists('known_face_names.txt'):
     with open('known_face_names.txt','rb') as fp:
         known_face_names=pickle.load(fp)
 else:
     known_face_names=[]
 
+# text file to store face encodings of the users
 if os.path.exists('known_face_encodings.txt'):
     with open('known_face_encodings.txt','rb') as fp:
         known_face_encodings=pickle.load(fp)
@@ -32,15 +34,17 @@ else:
     known_face_encodings=[]
 
 
-
+ # Using YOLOv5 model for object detection
 model= torch.hub.load('ultralytics/yolov5', 'yolov5s')
 index = 0
 
+# function to make face encodings
 def make_encoding(username,known_face_encodings, file_path):
     images[username]=face_recognition.load_image_file(file_path)
     encoding[username]=face_recognition.face_encodings(images[username])[0]
     known_face_encodings.append(encoding[username])
 
+# function that generates frame and process it to recognise face, detect mobile phones and head position
 def generate_frames(model, known_face_encodings,known_face_names):
     camera = cv2.VideoCapture(0)
     candidates = pd.read_csv('candidates.csv')
@@ -81,7 +85,7 @@ def generate_frames(model, known_face_encodings,known_face_names):
 @app.route("/", methods=["GET", "POST"])
 def register():
     msg=""
-    if (os.path.exists("candidates.csv")):
+    if (os.path.exists("candidates.csv")):    # CSV file to store the database
         candidates = pd.read_csv('candidates.csv')
     else:
         candidates = pd.DataFrame(columns = ['id', 'username', 'password', 'gender'])
@@ -125,7 +129,8 @@ def register():
 def login():
     msg = ''
     candidates = pd.read_csv('candidates.csv')
-    if request.method=="POST" and 'Username' in request.form and 'psw' in request.form: # fetching information from login page
+    if request.method=="POST" and 'Username' in request.form and 'psw' in request.form:
+         # fetching information from login page
         username= request.form["Username"]
         password=request.form["psw"]
         person = candidates[(candidates.username == username) & (candidates.password == password)].head(1)
