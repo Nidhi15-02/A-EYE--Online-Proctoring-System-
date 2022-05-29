@@ -8,7 +8,7 @@ import mediapipe as mp
 import dlib
 import torch
 
-
+# function for detecting head position
 def head_pose_detect(image):
     
     mp_face_mesh = mp.solutions.face_mesh
@@ -94,16 +94,17 @@ def head_pose_detect(image):
             p2 = (int(nose_2d[0] + y * 10) , int(nose_2d[1] - x * 10))
             
             return text
-
+        
+#function for detecting phone and person
 def detect_phone_person(model, img):
     
-    results = model(img)
-    labels, _ = results.xyxyn[0][:, -1].numpy(), results.xyxyn[0][:, :-1].numpy()
+    results = model(img)  # making prediction over the given image
+    labels, _ = results.xyxyn[0][:, -1].numpy(), results.xyxyn[0][:, :-1].numpy() # extracting the labels of the object detected by the model
     count=0
     for i in labels:
-        if(i==0):
+        if(i==0):        #label 0 is for person
             count+=1
-        if(i==67):
+        if(i==67):      # label 67 is for mobile phones
             text="Mobile Phone detected"
             return text
     if(count>1):
@@ -112,6 +113,7 @@ def detect_phone_person(model, img):
         text=" "    
     return text
 
+# function for recognising face 
 def detect_faces_wc(known_face_encodings,known_face_names, frame):
 
     face_locations = []
