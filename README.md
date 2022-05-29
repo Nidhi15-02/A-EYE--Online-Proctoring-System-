@@ -9,7 +9,7 @@ A-EYE is an AI-based proctoring system. It has following features.
 # User Guide (For Windows only)
 Steps to run this on your local computer:
 - You need to have Python installed on your device to run this. You can download Python from [here](https://www.python.org/downloads/)
-- You also need Visual Studio 2022 for C++ to run this file. So, kindly install that. You can refer [here](https://youtu.be/MOCr-u76LiI) to install Visual Studio 2022  for C++
+- You also need Visual Studio 2022 for C++ to run this file. So, kindly install that. You can refer [here](https://docs.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-170) to install Visual Studio 2022 for C++. Download "Desktop Development with C++", and select "MSVC" and "Windows 10 SDK", as optional features to install.
 
 - Make a folder in your local computer where you want to save the files
 
