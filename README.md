@@ -6,7 +6,7 @@ A-EYE is an AI-based proctoring system. It has following features.
 - Student dashboard page
 - Test page which will switch the video cam on and keep an eye on the candidate. It is capable of recognizing the candidate, detecting  the mobile phone and head positions, and raising alert messages if any malpractice is observed.
 
-# User Guide
+# User Guide (For Windows only)
 Steps to run this on your local computer:
 - You need to have Python installed on your device to run this. You can download Python from [here](https://www.python.org/downloads/)
 - You also need Visual Studio 2022 for C++ to run this file. So, kindly install that. You can refer [here](https://youtu.be/MOCr-u76LiI) to install Visual Studio 2022  for C++
