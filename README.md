@@ -29,6 +29,7 @@ path\to\venv\Scripts\Activate.ps1  (Run this line with your path to activate the
 ```
 - Download the requirements of the environment using
 ```
+pip install cmake
 pip install -r requirements.txt
 ```
 - Now run the website
